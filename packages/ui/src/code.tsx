@@ -1,13 +1,18 @@
-import React, { ReactNode } from 'react';
+import React, { PropsWithChildren } from 'react';
 
-interface ComponentProps {
+interface ComponentProps
+  extends PropsWithChildren<React.HTMLAttributes<HTMLDivElement>> {
   className?: string;
-  children?: ReactNode;
 }
 
 export const Component: React.FC<ComponentProps> = ({
   className,
-  children
+  children,
+  ...props
 }) => {
-  return <div className={className}>{children}</div>;
+  return (
+    <div className={className} {...props}>
+      {children}
+    </div>
+  );
 };
