@@ -16,7 +16,7 @@ Monorepo for sharing apps and packages using [pnpm](https://pnpm.io/) and [Turbo
     - Mostly for learning purposes as an "industry standard". I'd use [Biome](https://biomejs.dev/) in other projects.
 - [Typescript](https://www.typescriptlang.org/) configs: `/typescript-config`
     - Needs optomization
-- [React UI Components](https://ui.shadcn.com/): `/ui` 
+- React UI Components: `/ui` 
     - Simple pure React UI library (check the [package.json](./packages/ui/package.json)) to share
 
 ## Development
