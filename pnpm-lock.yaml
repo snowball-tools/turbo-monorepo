@@ -25,10 +25,11 @@ importers:
         version: 5.6.3
 
   apps/api:
+    dependencies:
+      express:
+        specifier: ^4.21.2
+        version: 4.21.2
     devDependencies:
-      '@eslint/js':
-        specifier: ^9.18.0
-        version: 9.18.0
       '@snowball-tools/eslint-config':
         specifier: workspace:*
         version: link:../../packages/eslint-config
@@ -38,27 +39,15 @@ importers:
       '@types/express':
         specifier: ^5.0.0
         version: 5.0.0
-      eslint:
-        specifier: ^9.18.0
-        version: 9.18.0(jiti@2.4.2)
-      express:
-        specifier: ^4.21.2
-        version: 4.21.2
-      globals:
-        specifier: ^15.14.0
-        version: 15.14.0
-      ts-node:
-        specifier: ^10.9.2
-        version: 10.9.2(@swc/core@1.10.7)(@types/node@22.10.5)(typescript@5.6.3)
       typescript:
         specifier: ~5.6.2
         version: 5.6.3
-      typescript-eslint:
-        specifier: ^8.19.1
-        version: 8.19.1(eslint@9.18.0(jiti@2.4.2))(typescript@5.6.3)
 
   apps/web:
     dependencies:
+      '@snowball-tools/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
       react:
         specifier: ^19.0.0
         version: 19.0.0
@@ -66,9 +55,6 @@ importers:
         specifier: ^19.0.0
         version: 19.0.0(react@19.0.0)
     devDependencies:
-      '@eslint/js':
-        specifier: ^9.18.0
-        version: 9.18.0
       '@snowball-tools/eslint-config':
         specifier: workspace:*
         version: link:../../packages/eslint-config
@@ -84,24 +70,9 @@ importers:
       '@vitejs/plugin-react-swc':
         specifier: ^3.7.2
         version: 3.7.2(vite@6.0.7(@types/node@22.10.5)(jiti@2.4.2))
-      eslint:
-        specifier: ^9.18.0
-        version: 9.18.0(jiti@2.4.2)
-      eslint-plugin-react-hooks:
-        specifier: ^5.1.0
-        version: 5.1.0(eslint@9.18.0(jiti@2.4.2))
-      eslint-plugin-react-refresh:
-        specifier: ^0.4.16
-        version: 0.4.16(eslint@9.18.0(jiti@2.4.2))
-      globals:
-        specifier: ^15.14.0
-        version: 15.14.0
       typescript:
         specifier: ~5.6.2
         version: 5.6.3
-      typescript-eslint:
-        specifier: ^8.19.1
-        version: 8.19.1(eslint@9.18.0(jiti@2.4.2))(typescript@5.6.3)
       vite:
         specifier: ^6.0.7
         version: 6.0.7(@types/node@22.10.5)(jiti@2.4.2)
@@ -120,9 +91,6 @@ importers:
       '@stylistic/eslint-plugin':
         specifier: ^2.12.1
         version: 2.12.1(eslint@9.18.0(jiti@2.4.2))(typescript@5.6.3)
-      eslint:
-        specifier: ^9.18.0
-        version: 9.18.0(jiti@2.4.2)
       eslint-config-flat-gitignore:
         specifier: ^1.0.0
         version: 1.0.0(eslint@9.18.0(jiti@2.4.2))
@@ -132,6 +100,12 @@ importers:
       eslint-plugin-react:
         specifier: ^7.37.3
         version: 7.37.3(eslint@9.18.0(jiti@2.4.2))
+      eslint-plugin-react-hooks:
+        specifier: ^5.1.0
+        version: 5.1.0(eslint@9.18.0(jiti@2.4.2))
+      eslint-plugin-react-refresh:
+        specifier: ^0.4.17
+        version: 0.4.17(eslint@9.18.0(jiti@2.4.2))
       find-up-simple:
         specifier: ^1.0.0
         version: 1.0.0
@@ -1329,8 +1303,8 @@ packages:
     peerDependencies:
       eslint: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0-0 || ^9.0.0
 
-  eslint-plugin-react-refresh@0.4.16:
-    resolution: {integrity: sha512-slterMlxAhov/DZO8NScf6mEeMBBXodFUolijDvrtTxyezyLoTQaa73FyYus/VbTdftd8wBgBxPMRk3poleXNQ==}
+  eslint-plugin-react-refresh@0.4.17:
+    resolution: {integrity: sha512-CwInESUBZM8tV3SiCgg0pNOqir9judwt8eQ+WJRkS4xTy0zTDrtiSigRBbBOe6TOX8dvfKLdKrA3BZjXsdKoIg==}
     peerDependencies:
       eslint: '>=8.40'
 
@@ -4151,7 +4125,7 @@ snapshots:
     dependencies:
       eslint: 9.18.0(jiti@2.4.2)
 
-  eslint-plugin-react-refresh@0.4.16(eslint@9.18.0(jiti@2.4.2)):
+  eslint-plugin-react-refresh@0.4.17(eslint@9.18.0(jiti@2.4.2)):
     dependencies:
       eslint: 9.18.0(jiti@2.4.2)
 

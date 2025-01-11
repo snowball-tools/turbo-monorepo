@@ -7,8 +7,8 @@ import gitignore from 'eslint-config-flat-gitignore';
 import eslintPluginImportAlias from '@dword-design/eslint-plugin-import-alias';
 import { findUpSync } from 'find-up-simple';
 import type { Linter } from 'eslint';
-import { spawnSync } from 'node:child_process';
-import { basename, join } from 'node:path';
+import { spawnSync } from 'child_process';
+import { basename, join } from 'path';
 
 const CI_environment = Boolean(process.env.CI);
 
@@ -64,8 +64,10 @@ export function getBaseConfig(
       );
     }
 
+    const newArgsArray = Array.from(new Set(newArgs));
+    const processArgsArray = Array.from(new Set(process.argv.slice(1)));
     const argsHaveChanged
-      = new Set(newArgs).difference(new Set(process.argv.slice(1))).size > 0;
+      = newArgsArray.filter(x => !processArgsArray.includes(x)).length > 0;
 
     if (argsHaveChanged) {
       console.log();

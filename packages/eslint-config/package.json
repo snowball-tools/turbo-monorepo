@@ -13,14 +13,15 @@
     "check:types": "tsc"
   },
   "devDependencies": {
+    "@snowball-tools/typescript-config": "workspace:*",
     "@dword-design/eslint-plugin-import-alias": "^5.1.1",
     "@eslint/js": "^9.18.0",
-    "@snowball-tools/typescript-config": "workspace:*",
     "@stylistic/eslint-plugin": "^2.12.1",
-    "eslint": "^9.18.0",
     "eslint-config-flat-gitignore": "^1.0.0",
     "eslint-plugin-file-progress": "^3.0.1",
     "eslint-plugin-react": "^7.37.3",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-react-refresh": "^0.4.17",
     "find-up-simple": "^1.0.0",
     "globals": "^15.14.0",
     "typescript-eslint": "^8.19.1"

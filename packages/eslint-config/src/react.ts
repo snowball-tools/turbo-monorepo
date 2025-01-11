@@ -6,13 +6,13 @@ import react from 'eslint-plugin-react';
 
 export function getReactConfig() {
   return [
+    reactRefresh.default.configs.recommended,
     {
       files: ['**/*.{js,jsx,ts,tsx}'],
       settings: { react: { version: '19.0.0' } },
       plugins: {
         react,
-        'react-hooks': reactHooks,
-        'react-refresh': reactRefresh
+        'react-hooks': reactHooks
       },
       rules: {
         ...reactHooks.configs.recommended.rules,
