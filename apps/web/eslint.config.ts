@@ -2,10 +2,12 @@ import {
   getBaseConfig,
   getImportAliasConfig,
   getTypeScriptConfig,
-} from "@snowball-tools/eslint-config";
+  getReactConfig
+} from '@snowball-tools/eslint-config';
 
 export default [
-  ...getBaseConfig("web"),
+  ...getBaseConfig('web'),
   ...getImportAliasConfig(),
   ...getTypeScriptConfig(),
+  ...getReactConfig()
 ];
