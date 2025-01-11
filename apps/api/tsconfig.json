@@ -1,13 +1,9 @@
 {
+  "extends": "@snowball-tools/typescript-config/base.json",
   "compilerOptions": {
-    "target": "es6",
-    "module": "commonjs",
-    "outDir": "./dist",
-    "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "lib": ["ES2015"],
+    "outDir": "./dist"
   },
-  "include": ["src/**/*.ts"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules"],
+  "include": ["."]
 }

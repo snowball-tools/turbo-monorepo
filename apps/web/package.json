@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "eslint .",
+    "lint": "eslint . --fix",
     "preview": "vite preview",
     "check-types": "tsc --noEmit"
   },
@@ -15,6 +15,8 @@
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
+    "@snowball-tools/eslint-config": "workspace:*",
+    "@snowball-tools/typescript-config": "workspace:*",
     "@eslint/js": "^9.18.0",
     "@types/react": "^19.0.4",
     "@types/react-dom": "^19.0.2",
